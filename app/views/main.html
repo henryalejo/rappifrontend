@@ -1,15 +1,27 @@
 
 
 
-<div class="col-sm-12 col-md-offset-2 col-md-8 mainpanel">
+<div class="col-sm-12 col-md-offset-2 col-md-8 mainpanel fx-bounce-up fx-speed-1000" ng-show="maintime">
 <div class="row">
   <div class="head">
-      <span class="glyphicon glyphicon-th-list"></span>
+    <div class="col-sm-1">
+      <span class="glyphicon glyphicon-th-list pointer" ng-click="setNews()">
+      </span>
+    </div>
+    <div class="col-sm-11">
+      <div class="head-title" ng-repeat="head in news" >
+        <div class="fx-bounce-left  fx-speed-1000" ng-show="head.status">
+          <strong>{{head.title}}</strong>
+
+        </div>
+      </div>
+    </div>
   </div>
+
 </div>
-<div class="row" ng-repeat="new in news" class="fx-fade-down">
+<div class="row fx-zoom-left  fx-speed-1000" ng-repeat="new in news" >
   <div class="col-sm-12 col-md-12">
-    <div class="panel panel-default panelnews" ng-click="changeStatus(new)">
+    <div class="panel panel-default pointer" ng-click="changeStatus(new)">
       <div class="panel-body">
         <div class="col-xs-6 col-sm-2 col-md-2">
           <img class="img-circle img-responsive panelround" ng-src="{{new.image}}" alt="" />
@@ -22,7 +34,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-md-12" id="{{new.id}}" ng-show="new.status" class="fx-fade-down">
+  <div class="col-sm-12 col-md-12 fx-bounce-down fx-speed-1000" id="{{new.id}}" ng-show="new.status">
     <div class="panel panel-default panel-large">
       <div class="panel-body">
         <div class="col-sm-6 col-md-6">

@@ -10,9 +10,13 @@
 angular.module('rappiApp')
   .controller('MainCtrl', function ($scope,$http) {
     $scope.news= [];
+    $scope.newsTemp= [];
+    $scope.headString='';
+    $scope.maintime = false;
     $http.get('news_mock.json').then(function successCallback(response){
       //$scope.news=response.data;
-      $scope.news = setStatus(response.data);
+      $scope.maintime = true;
+      $scope.newsTemp = setStatus(response.data);
       console.log(response.data);
     });
     function setStatus(data){
@@ -30,6 +34,14 @@ angular.module('rappiApp')
           value.status = !value.status;
         }
       });
+
+    }
+    $scope.setNews= function(){
+      if($scope.newsTemp.length>0){
+        $scope.news =$scope.newsTemp;
+      }
+    }
+    function setHead(){
 
     }
   });

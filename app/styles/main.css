@@ -20,7 +20,7 @@ body {
   bottom: 0;
   z-index: 99999;
   background-color: #E3E3E3;
-  min-height: 80%;
+  min-height: 50em;
   border-radius: 5px 5px 0 0;
   margin-top: 2em;
 }
@@ -30,16 +30,21 @@ body {
   z-index: 1000;
   border-radius: 5px 5px 0 0;
   box-sizing: border-box;
-  height: 55px;
+  min-height: 55px;
   padding: 18px 16px 16px;
   color: white;
   margin-bottom: 20px;
+}
+span {
   font-size: 1.5em;
+}
+.head-title{
+  font-size: 100%;
 }
 .panelround{
   max-height: 6em;
 }
-.panelnews{
+.pointer{
   cursor: pointer;
 }
 .image-large{

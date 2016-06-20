@@ -15,7 +15,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngFx.utils'
+    'ngAnimate',
+    'ng-fx'
   ])
   .config(function ($routeProvider) {
     $routeProvider
