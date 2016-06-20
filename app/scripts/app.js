@@ -10,12 +10,12 @@
  */
 angular
   .module('rappiApp', [
-    'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngFx.utils'
   ])
   .config(function ($routeProvider) {
     $routeProvider

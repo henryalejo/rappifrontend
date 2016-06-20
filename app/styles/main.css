@@ -19,7 +19,7 @@ body {
 .mainpanel{
   bottom: 0;
   z-index: 99999;
-  background-color: white;
+  background-color: #E3E3E3;
   min-height: 80%;
   border-radius: 5px 5px 0 0;
   margin-top: 2em;
@@ -39,7 +39,9 @@ body {
 .panelround{
   max-height: 6em;
 }
-
+.panelnews{
+  cursor: pointer;
+}
 .image-large{
   max-height: 19em;
 }
